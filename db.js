@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');   //Step 1   
 
 //Define the mongo db URL               step 2
-const mongoURL =  'mongodb://127.0.0.1:27017/hotel'
+//const mongoURL =  'mongodb://127.0.0.1:27017/hotel'
+const mongoURL = 'mongodb+srv://Varad_Borude:Varad@1070@cluster0.2neixsg.mongodb.net/'
 
 //Setup mongo db connection       Step 3
 mongoose.connect(mongoURL, {

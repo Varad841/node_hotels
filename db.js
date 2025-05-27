@@ -1,13 +1,14 @@
 const mongoose = require('mongoose');   //Step 1   
+require('dotenv').config();
 
 //Define the mongo db URL               step 2
-//const mongoURL =  'mongodb://127.0.0.1:27017/hotel'
-const mongoURL = 'mongodb+srv://Varad_Borude:12345@cluster0.2neixsg.mongodb.net/'
+//const mongoURL = process.env.DB_URL_LOCAL;
+const mongoURL = process.env.DB_URL;
 
 //Setup mongo db connection       Step 3
 mongoose.connect(mongoURL, {
     useNewUrlParser: true,
-    UseUnifiedTopology: true
+    useUnifiedTopology: true
 })
 
 //get the default connection       Step 4
@@ -29,3 +30,4 @@ db.on('disconnectd',()=>{
 
 //export the databse connection
 module.exports = db;    //step 6
+
